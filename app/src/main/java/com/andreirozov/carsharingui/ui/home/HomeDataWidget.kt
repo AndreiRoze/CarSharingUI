@@ -51,6 +51,7 @@ fun HomeDataWidget(isVisible: Boolean, animationDuration: Int, distance: Int) {
     // Animation for distance text
     val distanceCounter by animateIntAsState(
         targetValue = distance,
+        label = "Distance counter animation",
         animationSpec = tween(
             durationMillis = animationDuration * 2,
             easing = LinearOutSlowInEasing
@@ -119,7 +120,10 @@ private fun DistanceCard(distance: Int) {
     var isPressed by rememberSaveable { mutableStateOf(false) }
 
     // Scale of card
-    val scale by animateFloatAsState(if (isPressed) 0.96f else 1f)
+    val scale by animateFloatAsState(
+        targetValue = if (isPressed) 0.96f else 1f,
+        label = "Scale animation"
+    )
 
     // Context used for toast
     val context = LocalContext.current
@@ -189,7 +193,10 @@ private fun MapCard() {
     var isPressed by rememberSaveable { mutableStateOf(false) }
 
     // Scale of card
-    val scale by animateFloatAsState(if (isPressed) 0.96f else 1f)
+    val scale by animateFloatAsState(
+        targetValue = if (isPressed) 0.96f else 1f,
+        label = "Scale animation"
+    )
 
     // Context used for toast
     val context = LocalContext.current

@@ -57,7 +57,10 @@ fun HomeRecentTripsCard(
     var isPressed by rememberSaveable { mutableStateOf(false) }
 
     // Scale of card
-    val scale by animateFloatAsState(if (isPressed) 0.96f else 1f)
+    val scale by animateFloatAsState(
+        targetValue = if (isPressed) 0.96f else 1f,
+        label = "Scale animation"
+    )
 
     AnimatedVisibility(
         modifier = Modifier

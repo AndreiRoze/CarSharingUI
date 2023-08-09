@@ -50,6 +50,7 @@ fun CarDataWidget(
     // Animation for engine text
     val engineCounter by animateIntAsState(
         targetValue = engine,
+        label = "Engine counter animation",
         animationSpec = tween(
             durationMillis = animationDuration * 2,
             easing = LinearOutSlowInEasing
@@ -59,6 +60,7 @@ fun CarDataWidget(
     // Animation for temperature text
     val temperatureCounter by animateIntAsState(
         targetValue = temperature,
+        label = "Temperature counter animation",
         animationSpec = tween(
             durationMillis = animationDuration * 2,
             easing = LinearOutSlowInEasing
@@ -68,6 +70,7 @@ fun CarDataWidget(
     // Animation for gas text
     val gasCounter by animateIntAsState(
         targetValue = gas,
+        label = "Gas counter animation",
         animationSpec = tween(
             durationMillis = animationDuration * 2,
             easing = LinearOutSlowInEasing
